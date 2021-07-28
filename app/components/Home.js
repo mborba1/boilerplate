@@ -5,8 +5,9 @@ export const Home = (props) => {
   const { username } = props;
 
   return (
-    <div>
+    <div class="welcome-form">
       <h3>Welcome, {username}</h3>
+      <h4>What do you like to do today?</h4>
     </div>
   );
 };

@@ -1,9 +1,11 @@
-const router = require("express").Router();
+const router = require('express').Router()
+module.exports = router
+
+router.use('/users', require('./users'))
 
 router.use((req, res, next) => {
-  const err = new Error("API route not found!");
-  err.status = 404;
-  next(err);
-});
+  const error = new Error('Not Found')
+  error.status = 404
+  next(error)
+})
 
-module.exports = router;
